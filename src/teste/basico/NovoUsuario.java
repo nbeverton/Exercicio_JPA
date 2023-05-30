@@ -1,10 +1,16 @@
 package teste.basico;
 
-import org.hibernate.jpa.boot.spi.EntityManagerFactoryBuilder;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
 public class NovoUsuario {
 
     public static void main(String[] args) {
-        EntityManagerFactoryBuilder emf = Persistence;
+
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("exercicios-jpa");
+        EntityManager em = emf.createEntityManager();
+
+        
     }
 }
