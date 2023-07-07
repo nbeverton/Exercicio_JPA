@@ -15,4 +15,35 @@ public class Sobrinho {
     @ManyToMany(mappedBy = "sobrinhos")
     private List<Tio> tios = new ArrayList<>();
 
+    public Sobrinho() {
+    }
+
+    public Sobrinho(String nome) {
+        super();
+        Nome = nome;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNome() {
+        return Nome;
+    }
+
+    public void setNome(String nome) {
+        Nome = nome;
+    }
+
+    public List<Tio> getTios() {
+        return tios;
+    }
+
+    public void setTios(List<Tio> tios) {
+        this.tios = tios;
+    }
 }
