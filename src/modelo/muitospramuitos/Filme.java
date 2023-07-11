@@ -8,17 +8,19 @@ import java.util.List;
 @Table(name =  "filmes")
 public class Filme {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
     private Double nota;
 
     @ManyToMany(cascade = CascadeType.PERSIST)
     @JoinTable(
-            name = "atores_filmes",
+            name = "atores_filme",
             joinColumns = @JoinColumn(name = "filme_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(name = "ator_id", referencedColumnName = "id")
     )
-    private List<Ator> atores;
+    private List<Ator> atores = new ArrayList<Ator>();
 
     public Filme() {
     }

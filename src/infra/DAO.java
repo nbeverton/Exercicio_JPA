@@ -16,7 +16,7 @@ public class DAO<E> {
         try {
             emf = Persistence.createEntityManagerFactory("exercicios-jpa");
         } catch (Exception e){
-            // logar
+             //logar
         }
     }
 
