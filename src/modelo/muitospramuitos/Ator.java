@@ -10,12 +10,16 @@ public class Ator {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+    private Long id;
 
     private String nome;
 
     @ManyToMany(mappedBy = "atores", cascade = CascadeType.PERSIST)
     private List<Filme> filmes = new ArrayList<>();
+
+    public Ator() {
+
+    }
 
     public Ator(String nome) {
         super();
